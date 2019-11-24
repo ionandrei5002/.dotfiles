@@ -1,4 +1,5 @@
 [global_config]
+  tab_position = right
 [keybindings]
 [layouts]
   [[default]]

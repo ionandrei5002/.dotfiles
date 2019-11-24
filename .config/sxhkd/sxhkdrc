@@ -11,6 +11,10 @@
 
 # WM INDEPENDENT KEYBINDINGS
 
+# show keybindings helper
+super + F1
+	terminator --geometry=170x30 --title=keybindings_help -e show_help
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
