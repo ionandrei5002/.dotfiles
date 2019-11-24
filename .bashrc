@@ -93,6 +93,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias utils='/usr/bin/git --git-dir=/home/andrei/utils/ --work-tree=/home/andrei/bin'
 
 # some more ls aliases
 alias ll='ls -alF'

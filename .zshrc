@@ -103,3 +103,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias utils='/usr/bin/git --git-dir=/home/andrei/utils/ --work-tree=/home/andrei/bin'
