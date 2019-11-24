@@ -8,3 +8,4 @@ Base OS Elementary OS Juno
 - Nitrogen      - https://github.com/l3ib/nitrogen
 - Terminator    - https://github.com/janisozaur/terminator
 - Tint2         - https://gitlab.com/o9000/tint2
+- fzf           - https://pkgs.org/download/fzf
