@@ -240,7 +240,7 @@ ac_disconnected_cmd =
 #-------------------------------------
 # Executor 1
 execp = new
-execp_command = psuinfo -Ck -M'Network: '
+execp_command = rust-psutil -k
 execp_interval = 2
 execp_has_icon = 0
 execp_cache_icon = 1
@@ -263,7 +263,7 @@ execp_icon_h = 0
 #-------------------------------------
 # Executor 2
 execp = new
-execp_command = psuinfo -Cg
+execp_command = rust-psutil -p
 execp_interval = 2
 execp_has_icon = 0
 execp_cache_icon = 1
@@ -286,7 +286,7 @@ execp_icon_h = 0
 #-------------------------------------
 # Executor 3
 execp = new
-execp_command = psuinfo -Ca -N
+execp_command = rust-psutil -a
 execp_interval = 3
 execp_has_icon = 0
 execp_cache_icon = 1
@@ -355,7 +355,7 @@ execp_icon_h = 0
 #-------------------------------------
 # Executor 6
 execp = new
-execp_command = psuinfo -CM -N
+execp_command = rust-psutil -m
 execp_interval = 4
 execp_has_icon = 0
 execp_cache_icon = 1
