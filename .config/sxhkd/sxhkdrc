@@ -86,6 +86,31 @@ super + {o,i}
 super + {1-9,0}
 	bspc desktop -f ^{1-9,10}
 
+# focus desktops 1 - 6
+super + alt + 1
+	bspc desktop -f ^1; \
+	bspc desktop -f ^6
+
+# focus desktops 2 - 7
+super + alt + 2
+	bspc desktop -f ^2; \
+	bspc desktop -f ^7
+
+# focus desktops 3 - 8
+super + alt + 3
+	bspc desktop -f ^3; \
+	bspc desktop -f ^8
+
+# focus desktops 4 - 9
+super + alt + 4
+	bspc desktop -f ^4; \
+	bspc desktop -f ^9
+
+# focus desktops 5 - 10
+super + alt + 5
+	bspc desktop -f ^5; \
+	bspc desktop -f ^10
+
 # send to the given desktop
 super + shift + {1-9,0}
 	bspc node -d ^{1-9,10} --focus
@@ -134,6 +159,7 @@ ctrl + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+	
 
 # APPLICATION KEYBINDINGS (Super + Alt + Key)
 

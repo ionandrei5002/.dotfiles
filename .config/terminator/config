@@ -1,5 +1,6 @@
 [global_config]
   tab_position = right
+  use_custom_url_handler = True
 [keybindings]
 [layouts]
   [[default]]
