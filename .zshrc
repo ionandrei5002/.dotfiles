@@ -104,3 +104,19 @@ source $ZSH/oh-my-zsh.sh
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias utils='/usr/bin/git --git-dir=/home/andrei/utils/ --work-tree=/home/andrei/bin'
+
+bindkey -s '^o' 'lfcd\n'
+
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}

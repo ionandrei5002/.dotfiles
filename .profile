@@ -27,3 +27,4 @@ export GOPATH=$HOME/go
 
 export AWT_TOOLKIT=MToolkit
 export _JAVA_AWT_WM_NONREPARENTING=1
+if [ -e /home/andrei/.nix-profile/etc/profile.d/nix.sh ]; then . /home/andrei/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

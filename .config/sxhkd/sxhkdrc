@@ -15,6 +15,11 @@
 super + F1
 	terminator --geometry=170x30 --title=keybindings_help -e show_help
 
+# show terminal keybindings helper
+super + F2
+	terminator --geometry=170x30 --title=keybindings_help -e show_help_keybinds_terminal
+
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
