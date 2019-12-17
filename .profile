@@ -24,6 +24,7 @@ fi
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export GOPATH=$HOME/go
+export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 
 export AWT_TOOLKIT=MToolkit
 export _JAVA_AWT_WM_NONREPARENTING=1

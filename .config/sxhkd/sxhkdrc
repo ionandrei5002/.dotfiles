@@ -175,7 +175,7 @@ super + Return
 # DMENU SCRIPTS (Alt+Ctrl+Key)
 # run program launcher
 alt + ctrl + Return
-	dmenu_run
+	rofi -show run
 
 # LOCK SCREEN
 alt + ctrl + l
