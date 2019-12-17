@@ -172,10 +172,17 @@ super + {Left,Down,Up,Right}
 super + Return
 	terminator
     
-# DMENU SCRIPTS (Alt+Ctrl+Key)
 # run program launcher
 alt + ctrl + Return
 	rofi -show run
+
+# run window launcher
+alt + ctrl + w
+	rofi -show drun
+
+# run show open applications
+alt + ctrl + s
+	rofi -show window
 
 # LOCK SCREEN
 alt + ctrl + l
