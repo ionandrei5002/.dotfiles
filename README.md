@@ -13,3 +13,5 @@ Base OS Elementary OS Juno
 - lf            - https://linoxide.com/linux-how-to/lf-terminal-manager-linux/
 - surf          - https://surf.suckless.org/
 - rofi          - https://github.com/davatorium/rofi
+- nix		- https://nixos.org/nix/
+- snap		- https://snapcraft.io/

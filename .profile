@@ -22,7 +22,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="/snap/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 export GOPATH=$HOME/go
 export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 

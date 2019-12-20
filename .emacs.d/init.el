@@ -16,8 +16,9 @@
 
 ;; Install packages
 (defvar MyPackages
-  '(better-defaults ;; Set up some better Emacs default
-    material-theme  ;; Theme
+  '(better-defaults  ;; Set up some better Emacs default
+    material-theme   ;; Theme
+    multiple-cursors ;; Multiple cursors
     )
   )
 
@@ -44,5 +45,6 @@
  ;; If there is more than one, they won't work right.
  )
 
-
+;; Multiple cursor
+(global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
