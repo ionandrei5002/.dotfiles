@@ -15,3 +15,4 @@ Base OS Elementary OS Juno
 - rofi          - https://github.com/davatorium/rofi
 - nix		- https://nixos.org/nix/
 - snap		- https://snapcraft.io/
+- conda     - https://docs.conda.io/projects/conda/en/latest/index.html
