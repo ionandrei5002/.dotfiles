@@ -55,10 +55,10 @@ URxvt.urgentOnBell: true
 URxvt.depth: 24
 URxvt.iso14755: false
 
-*.font:xft:Monospace:style=Regular:size=14
-*.boldFont:xft:Monospace:style=Bold:size=14
-*.italicFont:xft:Monospace:style=Italic:size=14
-*.boldItalicFont:xft:Monospace:style=Bold Italic:size=14
+!!*.font:xft:Monospace:style=Regular:size=14
+!!*.boldFont:xft:Monospace:style=Bold:size=14
+!!*.italicFont:xft:Monospace:style=Italic:size=14
+!!*.boldItalicFont:xft:Monospace:style=Bold Italic:size=14
 
 !! Common Keybinds for Navigations
 URxvt.keysym.Shift-Up: command:\033]720;1\007
