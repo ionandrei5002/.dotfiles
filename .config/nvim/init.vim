@@ -1,9 +1,5 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -15,62 +11,40 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb'
 
+" by default, if you open tsx file, neovim does not show syntax colors
+" vim-tsx will do all the coloring for jsx in the .tsx file
 Plug 'ianks/vim-tsx'
+
+"------------------------ VIM TSX ------------------------
+" by default, if you open tsx file, neovim does not show syntax colors
+" typescript-vim will do all the coloring for typescript keywords
 Plug 'leafgarland/typescript-vim'
 
 " Nix Plugin
 Plug 'LnL7/vim-nix'
 
-Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs'}
+" Coc Plugin like VSCode
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-phpls', 'coc-python', 'coc-rls', 'coc-highlight']
 
 call plug#end()
 
-au User lsp_setup call lsp#register_server({                                    
-     \ 'name': 'php-language-server',                                            
-     \ 'cmd': ['php /home/andrei/.local/share/nvim/plugged/php-language-server/bin/php-language-server.php'],
-     \ 'whitelist': ['php'],                                                     
-     \ })
-
-if executable('typescript-language-server')
-    au User lsp_setup call lsp#register_server({
-    	\ 'name': 'javascript support using typescript-language-server',
-    	\ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-    	\ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
-    	\ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact'],
-    	\ })
-endif
-
-if executable('typescript-language-server')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'typescript-language-server',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-        \ 'whitelist': ['typescript', 'typescript.tsx'],
-        \ })
-endif
-
-if executable('rls')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'rls',
-        \ 'cmd': ['rls'],
-	\ 'whitelist': ['rust'],
-        \ })
-endif
-
-if executable('pyls')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': ['pyls'],
-        \ 'whitelist': ['python'],
-        \ })
-endif
+" == AUTOCMD ================================ 
+" by default .ts file are not identified as typescript and .tsx files are not
+" identified as typescript react file, so add following
+au BufNewFile,BufRead *.ts setlocal filetype=typescript
+au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
+" == AUTOCMD END ================================
 
 " terminal mode
 if has("nvim")
 	tnoremap <esc> <C-\><C-n>
 endif
 
+set shell=/bin/sh
 set number
+
+autocmd FileType json syntax match Comment +\/\/.\+$+
 
 let g:airline_theme='alduin'
 let g:airline_powerline_fonts = 1
