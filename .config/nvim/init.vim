@@ -25,7 +25,7 @@ Plug 'LnL7/vim-nix'
 
 " Coc Plugin like VSCode
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-phpls', 'coc-python', 'coc-rls', 'coc-highlight']
+let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-phpls', 'coc-python', 'coc-rls', 'coc-highlight']
 
 call plug#end()
 
@@ -41,7 +41,7 @@ if has("nvim")
 	tnoremap <esc> <C-\><C-n>
 endif
 
-set shell=/bin/sh
+set shell=/bin/zsh
 set number
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
@@ -73,6 +73,7 @@ let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_er
 let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
 "extensions
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#unicode#enabled = 1
@@ -90,4 +91,4 @@ let g:airline#extensions#branch#format = 2
 let g:gitgutter_enabled = 1
 let g:gitgutter_grep=''
 
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <ESC>t :NERDTreeToggle<CR>
