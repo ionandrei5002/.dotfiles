@@ -7,6 +7,7 @@ Plug 'scrooloose/nerdTree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+" git management plugins
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb'
@@ -25,7 +26,7 @@ Plug 'LnL7/vim-nix'
 
 " Coc Plugin like VSCode
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-phpls', 'coc-python', 'coc-rls', 'coc-highlight']
+let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-phpls', 'coc-python', 'coc-rls', 'coc-highlight', 'coc-xml', 'coc-yaml', 'coc-vimlsp']
 
 call plug#end()
 
@@ -45,6 +46,25 @@ set shell=/bin/zsh
 set number
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
+
+" Spaces & Tabs
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set shiftwidth=4    " number of spaces to use for autoindent
+set expandtab       " tabs are space
+set autoindent
+set copyindent      " copy indent from the previous line
+
+" UI Config
+set hidden
+set number                   " show line number
+set showcmd                  " show command in bottom bar
+set cursorline               " highlight current line
+set wildmenu                 " visual autocomplete for command menu
+set showmatch                " highlight matching brace
+set laststatus=2             " window will always have a status line
+set nobackup
+set noswapfile
 
 let g:airline_theme='alduin'
 let g:airline_powerline_fonts = 1
