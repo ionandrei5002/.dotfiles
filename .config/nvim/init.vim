@@ -66,6 +66,7 @@ set copyindent      " copy indent from the previous line
 
 " UI Config
 set hidden
+set relativenumber           " relative line number
 set number                   " show line number
 set showcmd                  " show command in bottom bar
 set cursorline               " highlight current line
