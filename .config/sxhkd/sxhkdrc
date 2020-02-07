@@ -170,7 +170,7 @@ super + {Left,Down,Up,Right}
 
 # terminal emulator
 super + Return
-	alacritty
+	terminator
     
 # run program launcher
 alt + ctrl + Return
