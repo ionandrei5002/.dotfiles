@@ -137,3 +137,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+source /home/andrei/.config/broot/launcher/bash/br
