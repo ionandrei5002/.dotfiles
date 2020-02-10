@@ -29,3 +29,7 @@ Base OS Elementary OS Juno
 - tldr          - https://github.com/tldr-pages/tldr
 - tmux          - https://github.com/tmux/tmux
 - youtube-dl    - https://github.com/ytdl-org/youtube-dl/
+- broot         - https://github.com/Canop/broot
+- keepassxc     - https://github.com/keepassxreboot/keepassxc
+- vifm          - https://github.com/vifm/vifm
+- alacritty     - https://github.com/alacritty/alacritty
