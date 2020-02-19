@@ -33,3 +33,4 @@ Base OS Elementary OS Juno
 - keepassxc     - https://github.com/keepassxreboot/keepassxc
 - vifm          - https://github.com/vifm/vifm
 - alacritty     - https://github.com/alacritty/alacritty
+- ddgr          - https://github.com/jarun/ddgr
