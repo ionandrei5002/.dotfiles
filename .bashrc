@@ -125,3 +125,5 @@ if ! shopt -oq posix; then
 fi
 
 source /home/andrei/.config/broot/launcher/bash/br
+
+eval "$(direnv hook bash)"
