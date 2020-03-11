@@ -44,6 +44,7 @@ values."
      org
      lsp
      rust
+     php
      (python :variables
              python-backend 'lsp
              python-lsp-server 'pyls)
